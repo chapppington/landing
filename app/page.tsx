@@ -5,6 +5,7 @@ import PartnershipScreen from "./screens/PartnershipScreen";
 import PreviousMeetingsScreen from "./screens/PreviousMeetingsScreen";
 import ProgramScreen from "./screens/ProgramScreen";
 import SpeakersScreen from "./screens/SpeakersScreen";
+import VenueScreen from "./screens/VenueScreen";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <PreviousMeetingsScreen />
       <PartnershipScreen />
       <OrganizerScreen />
+      <VenueScreen />
     </main>
   );
 }
