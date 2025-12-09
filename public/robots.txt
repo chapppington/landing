@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login
+Disallow: /auth/
+Disallow: /client_api/
+
+Disallow: /api/
+
+Allow: /sitemap.xml
+
+Sitemap: https://sibkomplekt.ru/sitemap.xml
