@@ -1,5 +1,6 @@
 import AboutConferenceScreen from "./screens/AboutConferenceScreen";
 import FirstScreen from "./screens/FirstScreen";
+import OrganizerScreen from "./screens/OrganizerScreen";
 import PartnershipScreen from "./screens/PartnershipScreen";
 import PreviousMeetingsScreen from "./screens/PreviousMeetingsScreen";
 import ProgramScreen from "./screens/ProgramScreen";
@@ -14,6 +15,7 @@ export default function Home() {
       <ProgramScreen />
       <PreviousMeetingsScreen />
       <PartnershipScreen />
+      <OrganizerScreen />
     </main>
   );
 }
