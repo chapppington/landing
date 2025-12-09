@@ -1,0 +1,123 @@
+.sm {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 16px),
+    calc(100% - 16px) 100%,
+    0 100%
+  ) !important;
+  border-radius: 8px !important;
+}
+
+.smIcon {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    0 100%
+  ) !important;
+  border-radius: 6px !important;
+}
+
+.md {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 18px),
+    calc(100% - 18px) 100%,
+    0 100%
+  ) !important;
+  border-radius: 9px !important;
+}
+
+.mdIcon {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 17px),
+    calc(100% - 17px) 100%,
+    0 100%
+  ) !important;
+  border-radius: 7px !important;
+}
+
+.lg {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%
+  ) !important;
+  border-radius: 10px !important;
+}
+
+.lgIcon {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 19px),
+    calc(100% - 19px) 100%,
+    0 100%
+  ) !important;
+  border-radius: 8px !important;
+}
+
+.xl {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 22px),
+    calc(100% - 22px) 100%,
+    0 100%
+  ) !important;
+  border-radius: 11px !important;
+}
+
+.xlIcon {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 21px),
+    calc(100% - 21px) 100%,
+    0 100%
+  ) !important;
+  border-radius: 9px !important;
+}
+
+.size2xl {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 24px),
+    calc(100% - 24px) 100%,
+    0 100%
+  ) !important;
+  border-radius: 12px !important;
+}
+
+.size2xlIcon {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 23px),
+    calc(100% - 23px) 100%,
+    0 100%
+  ) !important;
+  border-radius: 10px !important;
+}
+
+.main-btn-dark-fix::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  right: 4px;
+  width: 28px; /* Adjust width to match the skewed cut */
+  height: 2px;  /* Thin line */
+  background: white;
+  transform: rotate(-45deg) translate(8px, 8px); /* Adjust for your skew/clip-path */
+  border-radius: 1px;
+  pointer-events: none;
+  z-index: 2;
+}

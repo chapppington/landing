@@ -1,0 +1,28 @@
+.gradientHeading {
+  /* or 96% */
+  letter-spacing: -0.6px;
+  line-height: 110%;
+  display: inline-block;
+  width: 100%;
+
+  background: linear-gradient(170deg, #ffffff 0%, #ffffff 40%, #c0bdbd 100%),
+    #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Ensure gradient remains visible in animated lines */
+:global(.line) .gradientHeading {
+  -webkit-text-fill-color: transparent !important;
+}
+
+.fluidHeading {
+  font-size: clamp(1.5rem, 2.5vw + 5px, 6rem);
+}
+
+@media (min-width: 1600px) {
+  .fluidHeadingMain {
+    font-size: clamp(1.5rem, 3.5vw, 8rem);
+  }
+}

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ForumNavbar from "@/components/ForumNavbar";
 import CustomScrollbar from "@/components/CustomScrollbar";
+import ReactLenis from "lenis/react";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -22,9 +23,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
+      <ReactLenis
+                    root
+                    options={{
+                      lerp: 0.16,
+                      wheelMultiplier: 1,
+                      smoothWheel: true,
+                      orientation: "vertical",
+                      gestureOrientation: "vertical",
+                      infinite: false,
+                      syncTouch: true,
+                    }}
+                  >
         <CustomScrollbar />
         <ForumNavbar />
         {children}
+        </ReactLenis>
       </body>
     </html>
   );
