@@ -6,10 +6,11 @@ import GradientHeading from "@/components/ui/GradientHeading";
 import styles from "@/components/ui/GradientHeading/styles.module.css";
 import DateLocationBar from "@/components/shared_screens/Navbar/components/DateLocationBar";
 import MainButton from "@/components/ui/MainButton";
+import BackgroundGradient from "@/components/ui/BackgroundGradient";
 
 const FirstScreen: FC = () => {
   return (
-    <header id="top" className="relative min-h-screen flex items-center">
+    <header id="top" className="min-h-screen flex items-center relative z-10">
       <CustomContainer className="flex flex-col justify-center" fullHeight>
         <div className="max-w-4xl">
           <DateLocationBar />
