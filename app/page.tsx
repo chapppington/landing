@@ -7,6 +7,7 @@ import ProgramScreen from "./screens/ProgramScreen";
 import RegisterFormScreen from "./screens/RegisterFormScreen";
 import SpeakersScreen from "./screens/SpeakersScreen";
 import VenueScreen from "./screens/VenueScreen";
+import FooterMinimal from "@/components/FooterMinimal";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <OrganizerScreen />
       <VenueScreen />
       <RegisterFormScreen/>
+      <FooterMinimal />
     </main>
   );
 }

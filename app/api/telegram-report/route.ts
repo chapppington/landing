@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { readFile } from "fs/promises";
 import { existsSync } from "fs";
 import path from "path";
+import * as XLSX from "xlsx";
 
 export const dynamic = "force-dynamic";
 
@@ -27,11 +28,22 @@ export async function GET() {
 
     const csvContent = await readFile(filePath, "utf-8");
 
+    // Конвертируем CSV в XLSX
+    const workbook = XLSX.read(csvContent, { type: "string" });
+    const xlsxBuffer = XLSX.write(workbook, { type: "buffer", bookType: "xlsx" });
+    const date = new Date().toLocaleDateString("ru-RU"); // формата DD.MM.YYYY
+    const fileName = `registrations_${date}.xlsx`;
+
     const telegramUrl = `https://api.telegram.org/bot${token}/sendDocument`;
     const formData = new FormData();
     formData.append("chat_id", chatId);
-    formData.append("document", new Blob([csvContent], { type: "text/csv" }), "forum_registrations.csv");
-    formData.append("caption", "Экспорт регистраций (CSV)");
+    formData.append(
+      "document",
+      new Blob([xlsxBuffer], {
+        type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      }),
+      fileName
+    );
 
     const tgResponse = await fetch(telegramUrl, {
       method: "POST",
