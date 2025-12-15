@@ -179,7 +179,7 @@ const ForumNavbar: FC = () => {
           <button
             onClick={(e) => {
               e.preventDefault();
-              const element = document.querySelector("#partner");
+              const element = document.querySelector("#contact_us_screen");
               if (element) {
                 const elementPosition = element.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - 100;
@@ -316,7 +316,7 @@ const ForumNavbar: FC = () => {
                         e.preventDefault();
                         e.stopPropagation();
                         handleCloseMenu();
-                        const element = document.querySelector("#partner");
+                        const element = document.querySelector("#contact_us_screen");
                         if (element) {
                           const elementPosition = element.getBoundingClientRect().top;
                           const offsetPosition = elementPosition + window.pageYOffset - 100;
